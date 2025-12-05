@@ -31,7 +31,7 @@ This project communicates with a Node.js + Express + MongoDB backend and provide
 Clone the repository:
 
 ```bash
-git clone https://github.com/Subham-Karn/frontend-of-Chat-Application
+git clone https://github.com/Subham-Karn/Chat-Web-frontend
 cd frontend
 
 ```
