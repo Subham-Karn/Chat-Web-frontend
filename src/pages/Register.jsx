@@ -4,7 +4,7 @@ import { register } from "../api";
 import { Loader2 } from "lucide-react";
 import { connectSocket } from "../socket";
 
-const Register = (onAuth) => {
+const Register = ({onAuth}) => {
   const [registerData, setRegisterData] = React.useState({
     fullName: "",
     email: "",
@@ -38,7 +38,7 @@ const Register = (onAuth) => {
       window.location.reload();
       onAuth(res?.data?.user);
     } catch (error) {
-      const msg = error.response?.data?.message || "Something went wrong!";
+      const msg = error?.response?.data?.message || error?.message;
       alert(msg);
     }finally{
       setLoading(false);

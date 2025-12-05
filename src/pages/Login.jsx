@@ -4,7 +4,7 @@ import { Link, useNavigate,  } from "react-router-dom";
 import { login } from "../api";
 import { connectSocket } from "../socket";
 
-const Login = (onAuth) => {
+const Login = ({onAuth}) => {
   const [loginData, setLoginData] = React.useState({
     email: "",
     password: "",
